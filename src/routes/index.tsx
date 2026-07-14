@@ -231,20 +231,6 @@ function Index() {
         </button>
       </section>
 
-      {/* Video reel */}
-      <section id="reel" className="mx-auto max-w-6xl px-6 py-20">
-        <div className="mb-12 text-center">
-          <p className="mb-3 text-xs uppercase tracking-[0.35em] text-[color:var(--gold)]">
-            Action shots
-          </p>
-          <h2 className="text-4xl text-primary sm:text-5xl italic">The Winston reel.</h2>
-          <p className="mx-auto mt-4 max-w-md text-muted-foreground">
-            Tap a video to play it. Swipe for more.
-          </p>
-        </div>
-        <VideoReel videos={videoItems} />
-      </section>
-
       {/* Gallery */}
       <section id="gallery" className="mx-auto max-w-6xl px-6 py-24">
         <div className="mb-14 text-center">
@@ -257,6 +243,20 @@ function Index() {
           </p>
         </div>
         <Timeline photos={photoItems} onOpen={setLightbox} />
+      </section>
+
+      {/* Video reel */}
+      <section id="reel" className="mx-auto max-w-6xl px-6 py-20">
+        <div className="mb-12 text-center">
+          <p className="mb-3 text-xs uppercase tracking-[0.35em] text-[color:var(--gold)]">
+            Action shots
+          </p>
+          <h2 className="text-4xl text-primary sm:text-5xl italic">The Winston reel.</h2>
+          <p className="mx-auto mt-4 max-w-md text-muted-foreground">
+            Tap a video to play it. Swipe for more.
+          </p>
+        </div>
+        <VideoReel videos={videoItems} />
       </section>
 
       {/* Wishes */}
