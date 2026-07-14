@@ -21,7 +21,6 @@ export const MEDIA_OVERRIDES: Record<
   string,
   { caption?: string; dateOverride?: string; hidden?: boolean }
 > = {
-  "Messenger_creation_EE34352C-789D-44C0-97D0-7045D74BF031.jpeg": { caption: "The birthday grin", dateOverride: "2026-07-14" },
   "winston-hat-smile.jpeg": { caption: "The birthday grin", dateOverride: "2026-07-14" },
   "winston-tongue.jpeg": { caption: "Tongue out, living best life" },
   "winston-balloon.jpeg": { caption: "One whole year" },
