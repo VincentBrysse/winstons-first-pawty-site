@@ -25,6 +25,9 @@ import video2 from "@/assets/winston-video-2.mp4.asset.json";
 import video3 from "@/assets/winston-video-3.mp4.asset.json";
 import video4 from "@/assets/winston-video-4.mp4.asset.json";
 import video5 from "@/assets/winston_5ACDA576.mp4.asset.json";
+import video6 from "@/assets/winston_94D0FDF7.mp4.asset.json";
+import video7 from "@/assets/winston_23BE0D40.mp4.asset.json";
+import video8 from "@/assets/winston_1CD934CB.mp4.asset.json";
 import workDog from "@/assets/winston_B6F4B376.jpg.asset.json";
 import beerDad from "@/assets/winston_7CBFDB42.jpg.asset.json";
 import tongueOut from "@/assets/winston_77851332.jpg.asset.json";
@@ -34,6 +37,13 @@ import soccerBall from "@/assets/winston_53F2953B.jpg.asset.json";
 import toyTime from "@/assets/winston_CCCD2D58.jpg.asset.json";
 import lanternGaze from "@/assets/winston_21CC33C4.jpg.asset.json";
 import crateCozy from "@/assets/winston_6857E528.jpg.asset.json";
+import couchPose from "@/assets/winston_B7C0F4A9.jpg.asset.json";
+import beeSuit from "@/assets/winston_79407E9A.jpg.asset.json";
+import snowNose from "@/assets/winston_7366641E.jpg.asset.json";
+import withOma from "@/assets/winston_DA7AD943.jpg.asset.json";
+import bowTie from "@/assets/winston_AD55EB3E.jpg.asset.json";
+import familySelfie from "@/assets/winston_878922A8.jpg.asset.json";
+import sideEye from "@/assets/winston_E201976C.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
