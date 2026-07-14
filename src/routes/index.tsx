@@ -78,6 +78,13 @@ const photos = [
   { src: toyTime.url, caption: "Toy patrol duty", span: "" },
   { src: lanternGaze.url, caption: "Lantern-lit longing", span: "" },
   { src: crateCozy.url, caption: "Crate-cave cozy", span: "" },
+  { src: bowTie.url, caption: "Bow-tie gentleman", span: "md:col-span-2 md:row-span-2" },
+  { src: beeSuit.url, caption: "Buzz-worthy bee", span: "" },
+  { src: snowNose.url, caption: "First snow face", span: "md:col-span-2" },
+  { src: couchPose.url, caption: "The classic pose", span: "" },
+  { src: withOma.url, caption: "With oma", span: "" },
+  { src: sideEye.url, caption: "Sneaky side-eye", span: "md:col-span-2" },
+  { src: familySelfie.url, caption: "Family selfie", span: "" },
 ];
 
 
