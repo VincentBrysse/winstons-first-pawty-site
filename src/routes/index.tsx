@@ -59,6 +59,15 @@ const photos = [
   { src: profile.url, caption: "Regal profile", span: "" },
   { src: hatBack.url, caption: "Contemplating the balloon", span: "" },
   { src: raincoat.url, caption: "Rainy-day yellow", span: "" },
+  { src: workDog.url, caption: "CEO of Shark Corp", span: "md:col-span-2 md:row-span-2" },
+  { src: beerDad.url, caption: "Pintjes met me papah", span: "md:col-span-2" },
+  { src: tongueOut.url, caption: "Belly-up bliss", span: "" },
+  { src: donutBed.url, caption: "Donut-bed dreams", span: "" },
+  { src: muddyPaws.url, caption: "Good boy, muddy paws", span: "md:col-span-2" },
+  { src: soccerBall.url, caption: "Pawprint striker", span: "" },
+  { src: toyTime.url, caption: "Toy patrol duty", span: "" },
+  { src: lanternGaze.url, caption: "Lantern-lit longing", span: "" },
+  { src: crateCozy.url, caption: "Crate-cave cozy", span: "" },
 ];
 
 
