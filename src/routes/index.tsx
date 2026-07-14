@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 import { photoByName, photoItems, videoItems } from "@/lib/media";
+import { fetchWishes, submitWish, type Wish } from "@/lib/wishes";
 import { Timeline } from "@/components/birthday/Timeline";
 import { VideoReel } from "@/components/birthday/VideoReel";
 
@@ -16,15 +17,10 @@ function Index() {
   const [confetti, setConfetti] = useState<
     Array<{ id: number; left: number; dx: number; delay: number; color: string; size: number }>
   >([]);
-  const [wishes, setWishes] = useState<string[]>(() => {
-    if (typeof window === "undefined") return [];
-    try {
-      return JSON.parse(localStorage.getItem("winston-wishes") || "[]");
-    } catch {
-      return [];
-    }
-  });
+  const [wishes, setWishes] = useState<Wish[]>([]);
+  const [wishName, setWishName] = useState("");
   const [wishInput, setWishInput] = useState("");
+  const [wishStatus, setWishStatus] = useState<"idle" | "sending" | "error">("idle");
   const [lightbox, setLightbox] = useState<string | null>(null);
   const audioCtxRef = useRef<AudioContext | null>(null);
 
@@ -72,24 +68,40 @@ function Index() {
     setTimeout(() => setConfetti([]), 4500);
   };
 
-  const addWish = (e: React.FormEvent) => {
+  const addWish = async (e: React.FormEvent) => {
     e.preventDefault();
-    const v = wishInput.trim();
-    if (!v) return;
-    const next = [v, ...wishes].slice(0, 40);
-    setWishes(next);
-    setWishInput("");
+    const name = wishName.trim();
+    const message = wishInput.trim();
+    if (!name || !message || wishStatus === "sending") return;
+    setWishStatus("sending");
     try {
-      localStorage.setItem("winston-wishes", JSON.stringify(next));
+      await submitWish(name, message);
+      setWishes((prev) => [
+        {
+          id: `local-${Date.now()}`,
+          name,
+          message,
+          created_at: new Date().toISOString(),
+        },
+        ...prev,
+      ]);
+      setWishInput("");
+      setWishStatus("idle");
+      burstConfetti();
     } catch {
-      /* ignore */
+      setWishStatus("error");
     }
-    burstConfetti();
   };
 
   useEffect(() => {
     // opening confetti
     const t = setTimeout(burstConfetti, 400);
+    // load shared wishes
+    fetchWishes()
+      .then(setWishes)
+      .catch(() => {
+        /* wishes stay empty if offline */
+      });
     return () => clearTimeout(t);
   }, []);
 
@@ -266,30 +278,50 @@ function Index() {
         </p>
         <h2 className="text-4xl text-primary sm:text-5xl">Birthday wishes for Winston.</h2>
 
-        <form onSubmit={addWish} className="mx-auto mt-10 flex max-w-xl flex-col gap-3 sm:flex-row">
+        <form onSubmit={addWish} className="mx-auto mt-10 flex max-w-xl flex-col gap-3">
           <input
-            value={wishInput}
-            onChange={(e) => setWishInput(e.target.value)}
-            placeholder="Many happy naps, little Winston…"
-            className="flex-1 rounded-full border border-border bg-card px-6 py-3 text-sm outline-none placeholder:text-muted-foreground focus:border-[color:var(--gold)]"
-            maxLength={140}
+            value={wishName}
+            onChange={(e) => setWishName(e.target.value)}
+            placeholder="Your name"
+            className="rounded-full border border-border bg-card px-6 py-3 text-sm outline-none placeholder:text-muted-foreground focus:border-[color:var(--gold)]"
+            maxLength={40}
+            required
           />
-          <button
-            type="submit"
-            className="rounded-full bg-primary px-6 py-3 text-sm uppercase tracking-widest text-primary-foreground transition hover:bg-primary/90"
-          >
-            Send wish
-          </button>
+          <div className="flex flex-col gap-3 sm:flex-row">
+            <input
+              value={wishInput}
+              onChange={(e) => setWishInput(e.target.value)}
+              placeholder="Many happy naps, little Winston…"
+              className="flex-1 rounded-full border border-border bg-card px-6 py-3 text-sm outline-none placeholder:text-muted-foreground focus:border-[color:var(--gold)]"
+              maxLength={140}
+              required
+            />
+            <button
+              type="submit"
+              disabled={wishStatus === "sending"}
+              className="rounded-full bg-primary px-6 py-3 text-sm uppercase tracking-widest text-primary-foreground transition hover:bg-primary/90 disabled:opacity-60"
+            >
+              {wishStatus === "sending" ? "Sending…" : "Send wish"}
+            </button>
+          </div>
+          {wishStatus === "error" && (
+            <p className="text-sm text-destructive">
+              That didn't go through — please try again in a moment.
+            </p>
+          )}
         </form>
 
         {wishes.length > 0 && (
           <ul className="mx-auto mt-10 grid max-w-xl gap-3 text-left">
-            {wishes.map((w, i) => (
+            {wishes.map((w) => (
               <li
-                key={i}
-                className="rounded-2xl border border-border/60 bg-card/80 p-4 font-serif italic text-primary shadow-sm backdrop-blur"
+                key={w.id}
+                className="rounded-2xl border border-border/60 bg-card/80 p-4 shadow-sm backdrop-blur"
               >
-                "{w}"
+                <p className="font-serif italic text-primary">"{w.message}"</p>
+                <p className="mt-1 text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
+                  — {w.name}
+                </p>
               </li>
             ))}
           </ul>
