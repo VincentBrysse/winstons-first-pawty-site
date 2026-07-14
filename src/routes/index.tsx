@@ -6,6 +6,12 @@ import hatSit from "@/assets/winston-hat-sit.jpeg.asset.json";
 import hatSmile from "@/assets/winston-hat-smile.jpeg.asset.json";
 import raincoat from "@/assets/winston-raincoat.jpeg.asset.json";
 import shark from "@/assets/winston-shark.jpeg.asset.json";
+import hatBack from "@/assets/winston-hat-back.jpeg.asset.json";
+import tongue from "@/assets/winston-tongue.jpeg.asset.json";
+import profile from "@/assets/winston-profile.jpeg.asset.json";
+import grin from "@/assets/winston-grin.jpeg.asset.json";
+import lookup from "@/assets/winston-lookup.jpeg.asset.json";
+import jump from "@/assets/winston-jump.jpeg.asset.json";
 import video1 from "@/assets/winston-video-1.mp4.asset.json";
 import video2 from "@/assets/winston-video-2.mp4.asset.json";
 
@@ -15,11 +21,18 @@ export const Route = createFileRoute("/")({
 
 const photos = [
   { src: hatSmile.url, caption: "The birthday grin", span: "md:col-span-2 md:row-span-2" },
+  { src: tongue.url, caption: "Tongue out, living best life", span: "" },
   { src: balloon.url, caption: "One whole year", span: "" },
+  { src: jump.url, caption: "Pure joy in motion", span: "md:col-span-2" },
   { src: hatSit.url, caption: "Dignified party guest", span: "" },
+  { src: grin.url, caption: "Say cheese!", span: "" },
   { src: shark.url, caption: "Shark-attack Sunday", span: "md:col-span-2" },
+  { src: lookup.url, caption: "Is that cake?", span: "" },
+  { src: profile.url, caption: "Regal profile", span: "" },
+  { src: hatBack.url, caption: "Contemplating the balloon", span: "" },
   { src: raincoat.url, caption: "Rainy-day yellow", span: "" },
 ];
+
 
 function Index() {
   const [candleOut, setCandleOut] = useState(false);
