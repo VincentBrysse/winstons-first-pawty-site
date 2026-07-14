@@ -32,7 +32,7 @@ export const MEDIA_OVERRIDES: Record<
   "winston-grin.jpeg": { caption: "Say cheese!", dateOverride: "2026-07-14" },
   "winston-sausage-nap.jpeg": { caption: "Napping with sausage friends", dateOverride: "2026-04-24" },
   "winston-cozy-profile.jpeg": { caption: "Cozy profile study" , dateOverride: "2026-04-12"},
-  "winston-antler-2.jpeg": { caption: "Serious antler business", dateOverride: "2026-07-14" },
+  "winston-antler-2.jpeg": { caption: "Serious antler business", dateOverride: "2026-06-27" },
   "winston-swing.jpeg": { caption: "Swing-set snuggles", dateOverride: "2026-04-07" },
   "winston-sausage-toys.jpeg": { caption: "Guarding the squad", dateOverride: "2026-04-24" },
   "winston-shark.jpeg": { caption: "Shark-attack Sunday", dateOverride: "2026-03-16" },
