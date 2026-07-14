@@ -25,6 +25,9 @@ import video2 from "@/assets/winston-video-2.mp4.asset.json";
 import video3 from "@/assets/winston-video-3.mp4.asset.json";
 import video4 from "@/assets/winston-video-4.mp4.asset.json";
 import video5 from "@/assets/winston_5ACDA576.mp4.asset.json";
+import video6 from "@/assets/winston_94D0FDF7.mp4.asset.json";
+import video7 from "@/assets/winston_23BE0D40.mp4.asset.json";
+import video8 from "@/assets/winston_1CD934CB.mp4.asset.json";
 import workDog from "@/assets/winston_B6F4B376.jpg.asset.json";
 import beerDad from "@/assets/winston_7CBFDB42.jpg.asset.json";
 import tongueOut from "@/assets/winston_77851332.jpg.asset.json";
@@ -34,6 +37,13 @@ import soccerBall from "@/assets/winston_53F2953B.jpg.asset.json";
 import toyTime from "@/assets/winston_CCCD2D58.jpg.asset.json";
 import lanternGaze from "@/assets/winston_21CC33C4.jpg.asset.json";
 import crateCozy from "@/assets/winston_6857E528.jpg.asset.json";
+import couchPose from "@/assets/winston_B7C0F4A9.jpg.asset.json";
+import beeSuit from "@/assets/winston_79407E9A.jpg.asset.json";
+import snowNose from "@/assets/winston_7366641E.jpg.asset.json";
+import withOma from "@/assets/winston_DA7AD943.jpg.asset.json";
+import bowTie from "@/assets/winston_AD55EB3E.jpg.asset.json";
+import familySelfie from "@/assets/winston_878922A8.jpg.asset.json";
+import sideEye from "@/assets/winston_E201976C.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -68,6 +78,13 @@ const photos = [
   { src: toyTime.url, caption: "Toy patrol duty", span: "" },
   { src: lanternGaze.url, caption: "Lantern-lit longing", span: "" },
   { src: crateCozy.url, caption: "Crate-cave cozy", span: "" },
+  { src: bowTie.url, caption: "Bow-tie gentleman", span: "md:col-span-2 md:row-span-2" },
+  { src: beeSuit.url, caption: "Buzz-worthy bee", span: "" },
+  { src: snowNose.url, caption: "First snow face", span: "md:col-span-2" },
+  { src: couchPose.url, caption: "The classic pose", span: "" },
+  { src: withOma.url, caption: "With oma", span: "" },
+  { src: sideEye.url, caption: "Sneaky side-eye", span: "md:col-span-2" },
+  { src: familySelfie.url, caption: "Family selfie", span: "" },
 ];
 
 
@@ -264,7 +281,7 @@ function Index() {
       {/* Videos */}
       <section className="mx-auto max-w-6xl px-6 py-20">
         <div className="grid gap-6 md:grid-cols-2">
-          {[video1.url, video2.url, video3.url, video4.url, video5.url].map((src, i) => (
+          {[video1.url, video2.url, video3.url, video4.url, video5.url, video6.url, video7.url, video8.url].map((src, i) => (
             <div key={i} className="overflow-hidden rounded-2xl border border-border/60 bg-card shadow-[0_30px_60px_-30px_rgba(70,50,30,0.35)]">
               <video
                 src={src}
