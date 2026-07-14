@@ -24,6 +24,16 @@ import video1 from "@/assets/winston-video-1.mp4.asset.json";
 import video2 from "@/assets/winston-video-2.mp4.asset.json";
 import video3 from "@/assets/winston-video-3.mp4.asset.json";
 import video4 from "@/assets/winston-video-4.mp4.asset.json";
+import video5 from "@/assets/winston_5ACDA576.mp4.asset.json";
+import workDog from "@/assets/winston_B6F4B376.jpg.asset.json";
+import beerDad from "@/assets/winston_7CBFDB42.jpg.asset.json";
+import tongueOut from "@/assets/winston_77851332.jpg.asset.json";
+import donutBed from "@/assets/winston_A8B4BDC1.jpg.asset.json";
+import muddyPaws from "@/assets/winston_1E117168.jpg.asset.json";
+import soccerBall from "@/assets/winston_53F2953B.jpg.asset.json";
+import toyTime from "@/assets/winston_CCCD2D58.jpg.asset.json";
+import lanternGaze from "@/assets/winston_21CC33C4.jpg.asset.json";
+import crateCozy from "@/assets/winston_6857E528.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
