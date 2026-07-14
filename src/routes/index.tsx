@@ -24,6 +24,16 @@ import video1 from "@/assets/winston-video-1.mp4.asset.json";
 import video2 from "@/assets/winston-video-2.mp4.asset.json";
 import video3 from "@/assets/winston-video-3.mp4.asset.json";
 import video4 from "@/assets/winston-video-4.mp4.asset.json";
+import video5 from "@/assets/winston_5ACDA576.mp4.asset.json";
+import workDog from "@/assets/winston_B6F4B376.jpg.asset.json";
+import beerDad from "@/assets/winston_7CBFDB42.jpg.asset.json";
+import tongueOut from "@/assets/winston_77851332.jpg.asset.json";
+import donutBed from "@/assets/winston_A8B4BDC1.jpg.asset.json";
+import muddyPaws from "@/assets/winston_1E117168.jpg.asset.json";
+import soccerBall from "@/assets/winston_53F2953B.jpg.asset.json";
+import toyTime from "@/assets/winston_CCCD2D58.jpg.asset.json";
+import lanternGaze from "@/assets/winston_21CC33C4.jpg.asset.json";
+import crateCozy from "@/assets/winston_6857E528.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -49,6 +59,15 @@ const photos = [
   { src: profile.url, caption: "Regal profile", span: "" },
   { src: hatBack.url, caption: "Contemplating the balloon", span: "" },
   { src: raincoat.url, caption: "Rainy-day yellow", span: "" },
+  { src: workDog.url, caption: "CEO of Shark Corp", span: "md:col-span-2 md:row-span-2" },
+  { src: beerDad.url, caption: "Pintjes met me papah", span: "md:col-span-2" },
+  { src: tongueOut.url, caption: "Belly-up bliss", span: "" },
+  { src: donutBed.url, caption: "Donut-bed dreams", span: "" },
+  { src: muddyPaws.url, caption: "Good boy, muddy paws", span: "md:col-span-2" },
+  { src: soccerBall.url, caption: "Pawprint striker", span: "" },
+  { src: toyTime.url, caption: "Toy patrol duty", span: "" },
+  { src: lanternGaze.url, caption: "Lantern-lit longing", span: "" },
+  { src: crateCozy.url, caption: "Crate-cave cozy", span: "" },
 ];
 
 
@@ -245,7 +264,7 @@ function Index() {
       {/* Videos */}
       <section className="mx-auto max-w-6xl px-6 py-20">
         <div className="grid gap-6 md:grid-cols-2">
-          {[video1.url, video2.url, video3.url, video4.url].map((src, i) => (
+          {[video1.url, video2.url, video3.url, video4.url, video5.url].map((src, i) => (
             <div key={i} className="overflow-hidden rounded-2xl border border-border/60 bg-card shadow-[0_30px_60px_-30px_rgba(70,50,30,0.35)]">
               <video
                 src={src}
