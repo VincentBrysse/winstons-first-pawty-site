@@ -21,7 +21,7 @@ export const MEDIA_OVERRIDES: Record<
   string,
   { caption?: string; dateOverride?: string; hidden?: boolean }
 > = {
-  "winston-hat-smile.jpeg": { caption: "The birthday grin" },
+  "winston-hat-smile.jpeg": { caption: "The birthday grin", dateOverride: "2025-09-20" },
   "winston-tongue.jpeg": { caption: "Tongue out, living best life" },
   "winston-balloon.jpeg": { caption: "One whole year" },
   "winston-jump.jpeg": { caption: "Pure joy in motion" },
