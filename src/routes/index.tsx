@@ -245,7 +245,8 @@ function Index() {
       {/* Videos */}
       <section className="mx-auto max-w-6xl px-6 py-20">
         <div className="grid gap-6 md:grid-cols-2">
-          {[video1.url, video2.url].map((src, i) => (
+        <div className="grid gap-6 md:grid-cols-2">
+          {[video1.url, video2.url, video3.url, video4.url].map((src, i) => (
             <div key={i} className="overflow-hidden rounded-2xl border border-border/60 bg-card shadow-[0_30px_60px_-30px_rgba(70,50,30,0.35)]">
               <video
                 src={src}
