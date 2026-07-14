@@ -12,8 +12,18 @@ import profile from "@/assets/winston-profile.jpeg.asset.json";
 import grin from "@/assets/winston-grin.jpeg.asset.json";
 import lookup from "@/assets/winston-lookup.jpeg.asset.json";
 import jump from "@/assets/winston-jump.jpeg.asset.json";
+import antler1 from "@/assets/winston-antler-1.jpeg.asset.json";
+import antler2 from "@/assets/winston-antler-2.jpeg.asset.json";
+import couchSide from "@/assets/winston-couch-side.jpeg.asset.json";
+import sunbathing from "@/assets/winston-sunbathing.jpeg.asset.json";
+import sausageNap from "@/assets/winston-sausage-nap.jpeg.asset.json";
+import sausageToys from "@/assets/winston-sausage-toys.jpeg.asset.json";
+import cozyProfile from "@/assets/winston-cozy-profile.jpeg.asset.json";
+import swing from "@/assets/winston-swing.jpeg.asset.json";
 import video1 from "@/assets/winston-video-1.mp4.asset.json";
 import video2 from "@/assets/winston-video-2.mp4.asset.json";
+import video3 from "@/assets/winston-video-3.mp4.asset.json";
+import video4 from "@/assets/winston-video-4.mp4.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -24,9 +34,17 @@ const photos = [
   { src: tongue.url, caption: "Tongue out, living best life", span: "" },
   { src: balloon.url, caption: "One whole year", span: "" },
   { src: jump.url, caption: "Pure joy in motion", span: "md:col-span-2" },
+  { src: sunbathing.url, caption: "Sunbathing champion", span: "" },
+  { src: couchSide.url, caption: "Beard game strong", span: "" },
+  { src: antler1.url, caption: "Antler, obtained", span: "md:col-span-2" },
   { src: hatSit.url, caption: "Dignified party guest", span: "" },
   { src: grin.url, caption: "Say cheese!", span: "" },
-  { src: shark.url, caption: "Shark-attack Sunday", span: "md:col-span-2" },
+  { src: sausageNap.url, caption: "Napping with sausage friends", span: "md:col-span-2" },
+  { src: cozyProfile.url, caption: "Cozy profile study", span: "" },
+  { src: antler2.url, caption: "Serious antler business", span: "" },
+  { src: swing.url, caption: "Swing-set snuggles", span: "md:col-span-2" },
+  { src: sausageToys.url, caption: "Guarding the squad", span: "" },
+  { src: shark.url, caption: "Shark-attack Sunday", span: "" },
   { src: lookup.url, caption: "Is that cake?", span: "" },
   { src: profile.url, caption: "Regal profile", span: "" },
   { src: hatBack.url, caption: "Contemplating the balloon", span: "" },
@@ -227,7 +245,7 @@ function Index() {
       {/* Videos */}
       <section className="mx-auto max-w-6xl px-6 py-20">
         <div className="grid gap-6 md:grid-cols-2">
-          {[video1.url, video2.url].map((src, i) => (
+          {[video1.url, video2.url, video3.url, video4.url].map((src, i) => (
             <div key={i} className="overflow-hidden rounded-2xl border border-border/60 bg-card shadow-[0_30px_60px_-30px_rgba(70,50,30,0.35)]">
               <video
                 src={src}
