@@ -12,8 +12,18 @@ import profile from "@/assets/winston-profile.jpeg.asset.json";
 import grin from "@/assets/winston-grin.jpeg.asset.json";
 import lookup from "@/assets/winston-lookup.jpeg.asset.json";
 import jump from "@/assets/winston-jump.jpeg.asset.json";
+import antler1 from "@/assets/winston-antler-1.jpeg.asset.json";
+import antler2 from "@/assets/winston-antler-2.jpeg.asset.json";
+import couchSide from "@/assets/winston-couch-side.jpeg.asset.json";
+import sunbathing from "@/assets/winston-sunbathing.jpeg.asset.json";
+import sausageNap from "@/assets/winston-sausage-nap.jpeg.asset.json";
+import sausageToys from "@/assets/winston-sausage-toys.jpeg.asset.json";
+import cozyProfile from "@/assets/winston-cozy-profile.jpeg.asset.json";
+import swing from "@/assets/winston-swing.jpeg.asset.json";
 import video1 from "@/assets/winston-video-1.mp4.asset.json";
 import video2 from "@/assets/winston-video-2.mp4.asset.json";
+import video3 from "@/assets/winston-video-3.mp4.asset.json";
+import video4 from "@/assets/winston-video-4.mp4.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
