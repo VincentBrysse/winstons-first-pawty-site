@@ -68,25 +68,13 @@ export const MEDIA_OVERRIDES: Record<
   "winston-belly-up-dreams.jpg": { caption: "Maximum trust achieved", dateOverride: "2025-11-08" },
   "winston-grinch-nap.jpg": { caption: "Napping with the Grinch", dateOverride: "2025-12-10" },
   "winston-movie-night.jpg": { caption: "Movie night critic", dateOverride: "2025-12-28" },
-  "winston-winter-coat.jpg": {
-    caption: "Dressed for the weather, unimpressed",
-    dateOverride: "2026-01-05",
-  },
-  "winston-snow-inspector.jpg": {
-    caption: "Snow: thoroughly inspected",
-    dateOverride: "2026-01-10",
-  },
+  "winston-winter-coat.jpg": { caption: "Dressed for the weather, unimpressed", dateOverride: "2026-01-05" },
+  "winston-snow-inspector.jpg": { caption: "Snow: thoroughly inspected", dateOverride: "2026-01-10" },
   "winston-bad-hair-day.jpg": { caption: "Woke up like this", dateOverride: "2026-02-14" },
   "winston-pink-donut-nap.jpg": { caption: "Curled to perfection", dateOverride: "2026-03-01" },
-  "winston-showroom-stroll.jpg": {
-    caption: "Interior design consultant",
-    dateOverride: "2026-03-20",
-  },
+  "winston-showroom-stroll.jpg": { caption: "Interior design consultant", dateOverride: "2026-03-20" },
   "winston-terrace-date.jpg": { caption: "Terrace season opener", dateOverride: "2026-04-25" },
   "winston-floor-flop.jpg": { caption: "Two beds, chose the floor", dateOverride: "2026-05-10" },
-  "winston-forest-treats.jpg": {
-    caption: "Forest picnic, treats included",
-    dateOverride: "2026-06-14",
-  },
+  "winston-forest-treats.jpg": { caption: "Forest picnic, treats included", dateOverride: "2026-06-14", },
   "winston-cooling-mat.jpg": { caption: "Summer survival mode", dateOverride: "2026-07-01" },
 };
